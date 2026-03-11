@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoStudio - Mes réalisations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Modern CSS-only filtering logic */
+        .filter-radio {
+            display: none;
+        }
+
+        /* Default Filter State */
+        .filter-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: var(--font-title);
+            font-weight: 500;
+            transition: all var(--transition-smooth);
+            margin: 0 5px 15px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .filter-btn:hover {
+            background: rgba(var(--primary-rgb), 0.1);
+            color: var(--text-light);
+            border-color: rgba(var(--primary-rgb), 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Active Filter Logic */
+        #all:checked ~ .filters label[for="all"],
+        #portrait:checked ~ .filters label[for="portrait"],
+        #evenement:checked ~ .filters label[for="evenement"],
+        #paysage:checked ~ .filters label[for="paysage"] {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Hiding Logic */
+        #portrait:checked ~ .portfolio-grid .item:not(.portrait),
+        #evenement:checked ~ .portfolio-grid .item:not(.evenement),
+        #paysage:checked ~ .portfolio-grid .item:not(.paysage) {
+            display: none;
+        }
+
+        /* Showing Animation Logic */
+        .item {
+            animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <!-- Header Glassmorphism -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                PhotoStudio
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section-padding">
+            <div class="header-bg"></div>
+            <div class="container text-center reveal">
+                <span class="section-tag">Galerie</span>
+                <h1 class="gradient-text display-title">Mes Réalisations</h1>
+                <p class="subtitle mx-auto">Découvrez l'esthétique et l'émotion figées dans le temps à travers mon objectif.</p>
+                <div class="heading-line mx-auto"></div>
+            </div>
+        </section>
+
+        <section class="portfolio-content section-padding bg-darker">
+            <div class="container portfolio-wrapper">
+
+                <!-- Hidden inputs for CSS filtering -->
+                <input type="radio" id="all" name="filter" class="filter-radio" checked>
+                <input type="radio" id="portrait" name="filter" class="filter-radio">
+                <input type="radio" id="evenement" name="filter" class="filter-radio">
+                <input type="radio" id="paysage" name="filter" class="filter-radio">
+
+                <div class="filters text-center reveal">
+                    <label for="all" class="filter-btn">Tout Afficher</label>
+                    <label for="portrait" class="filter-btn">Portrait</label>
+                    <label for="evenement" class="filter-btn">Événement</label>
+                    <label for="paysage" class="filter-btn">Paysage</label>
+                </div>
+
+                <div class="portfolio-grid mt-5">
+
+                    <!-- Item 1: Portrait -->
+                    <div class="item portrait">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Portrait Beauté" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Portrait</span>
+                                <h3>Essence & Lumière</h3>
+                                <p>Séance studio, Douala</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Evenement -->
+                    <div class="item evenement">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mariage d'été" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Événementiel</span>
+                                <h3>L'Union Sacrée</h3>
+                                <p>Cérémonie, Yaoundé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Paysage -->
+                    <div class="item paysage">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Montagnes" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Paysage</span>
+                                <h3>Mont Cameroun</h3>
+                                <p>Buea, Aube brumeuse</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Portrait -->
+                    <div class="item portrait">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Portrait Homme" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Portrait</span>
+                                <h3>Corporate Identity</h3>
+                                <p>Shooting professionnel, Bonanjo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Evenement -->
+                    <div class="item evenement">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cérémonie Civile" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Événementiel</span>
+                                <h3>Gala de Charité</h3>
+                                <p>Soirée d'entreprise, Kribi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Paysage -->
+                    <div class="item paysage">
+                        <div class="portfolio-card glass-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forêt tropicale" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category-badge">Paysage</span>
+                                <h3>Cœur de la Forêt</h3>
+                                <p>Réserve de Dja, Nature brute</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-banner reveal">
+            <div class="container text-center">
+                <h3>Un projet en tête ?</h3>
+                <p>Créons ensemble des images qui feront la différence.</p>
+                <a href="contact.html" class="btn btn-primary mt-3">Discutons-en</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                    PhotoStudio
+                </a>
+                <p>L'excellence photographique à votre service au Cameroun et à l'international.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Suivez-moi</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-500px"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PhotoStudio. Tous droits réservés.</p>
+            <p class="student-credit mt-3">Projet réalisé par l'étudiant <strong>Guepi takouo peguy maeva</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoStudio - L'Art de la Photographie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Header Glassmorphism -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                PhotoStudio
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="gradient-text">Capturer l'instant présent</h1>
+                <p class="hero-subtitle">Photographie professionnelle d'exception au Cameroun.</p>
+                <div class="hero-cta">
+                    <a href="portfolio.html" class="btn btn-primary">Explorer mon travail <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-outline">Réserver une séance</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Défilez</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Expertise</span>
+                    <h2 class="gradient-text">Mes Domaines d'Intervention</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card reveal">
+                        <div class="service-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Portrait Studio & Extérieur</h3>
+                        <p>Des portraits saisissants qui révèlent votre essence. Idéal pour les profils professionnels, la mode, ou la beauté personnelle.</p>
+                        <span class="service-link">Découvrir <i class="fas fa-angle-right"></i></span>
+                    </div>
+
+                    <div class="service-card glass-card reveal delay-1">
+                        <div class="service-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3>Événementiel Premium</h3>
+                        <p>Mariages, galas, événements d'entreprise. Immortalisation de vos moments précieux avec une discrétion absolue et un œil artistique.</p>
+                        <span class="service-link">Découvrir <i class="fas fa-angle-right"></i></span>
+                    </div>
+
+                    <div class="service-card glass-card reveal delay-2">
+                        <div class="service-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Paysage & Architecture</h3>
+                        <p>Mise en valeur de lieux d'exception, d'infrastructures ou de paysages grandioses avec un traitement chromatique unique.</p>
+                        <span class="service-link">Découvrir <i class="fas fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Gallery Section -->
+        <section class="featured-gallery section-padding bg-darker">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Aperçu</span>
+                    <h2 class="gradient-text">Dernières Œuvres</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="gallery-masonry">
+                    <div class="gallery-item large reveal">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Mariage">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <span class="category">Événementiel</span>
+                                <h4>Célébration d'Exception</h4>
+                                <a href="portfolio.html" class="zoom-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal delay-1">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Portrait">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <span class="category">Portrait</span>
+                                <h4>Regard Profond</h4>
+                                <a href="portfolio.html" class="zoom-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal delay-2">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paysage">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <span class="category">Paysage</span>
+                                <h4>Aube Mystique</h4>
+                                <a href="portfolio.html" class="zoom-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item wide reveal">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Lifestyle">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <span class="category">Lifestyle</span>
+                                <h4>L'Échappée Belle</h4>
+                                <a href="portfolio.html" class="zoom-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 reveal">
+                    <a href="portfolio.html" class="btn btn-outline">Voir la galerie complète</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding reveal">
+            <div class="container">
+                <div class="cta-box glass-card">
+                    <h2 class="gradient-text">Prêt à raconter votre histoire ?</h2>
+                    <p>Chaque instant mérite d'être capturé avec perfection. Discutons de votre prochain projet visuel.</p>
+                    <a href="contact.html" class="btn btn-primary btn-large">Me Contacter <i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                    PhotoStudio
+                </a>
+                <p>L'excellence photographique à votre service au Cameroun et à l'international.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Suivez-moi</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-500px"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PhotoStudio. Tous droits réservés.</p>
+            <p class="student-credit mt-3">Projet réalisé par l'étudiant <strong>Guepi takouo peguy maeva</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

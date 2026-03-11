@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoStudio - Me Contacter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Header Glassmorphism -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                PhotoStudio
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section-padding">
+            <div class="header-bg" style="background-image: linear-gradient(rgba(10, 15, 26, 0.8), rgba(10, 15, 26, 0.8)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="container text-center reveal">
+                <span class="section-tag">Connexion</span>
+                <h1 class="gradient-text display-title">Parlons de Votre Projet</h1>
+                <p class="subtitle mx-auto">Une idée, une collaboration, ou une demande de devis ? Mon équipe est à votre écoute pour sublimer vos moments.</p>
+                <div class="heading-line mx-auto"></div>
+            </div>
+        </section>
+
+        <section class="contact-section section-padding bg-darker">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper glass-card reveal">
+                        <h3 class="mb-4">Envoyez-moi un message</h3>
+                        <form action="#" method="POST" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group input-container">
+                                    <input type="text" id="nom" name="nom" class="input-field" placeholder=" " required>
+                                    <label for="nom" class="input-label">Nom complet</label>
+                                    <span class="input-highlight"></span>
+                                </div>
+                                <div class="form-group input-container">
+                                    <input type="email" id="email" name="email" class="input-field" placeholder=" " required>
+                                    <label for="email" class="input-label">Adresse E-mail</label>
+                                    <span class="input-highlight"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group input-container mt-4">
+                                <select id="service" name="service" class="input-field" required>
+                                    <option value="" disabled selected>Choisissez le type de prestation</option>
+                                    <option value="portrait">Portrait & Beauté</option>
+                                    <option value="evenement">Événementiel (Mariage, Gala...)</option>
+                                    <option value="corporate">Entreprise & Corporate</option>
+                                    <option value="autre">Autre demande</option>
+                                </select>
+                                <span class="input-highlight"></span>
+                            </div>
+
+                            <div class="form-group input-container mt-4">
+                                <input type="text" id="sujet" name="sujet" class="input-field" placeholder=" " required>
+                                <label for="sujet" class="input-label">Sujet de la demande</label>
+                                <span class="input-highlight"></span>
+                            </div>
+
+                            <div class="form-group input-container mt-4">
+                                <textarea id="message" name="message" class="input-field textarea-field" placeholder=" " required></textarea>
+                                <label for="message" class="input-label">Votre message détaillé...</label>
+                                <span class="input-highlight"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large mt-4 w-100">
+                                <span>Envoyer la demande</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info & Map -->
+                    <div class="contact-info-wrapper reveal delay-1">
+                        <div class="info-card glass-card">
+                            <h3>Coordonnées</h3>
+                            <p class="text-muted mb-4">Je suis basé à Douala, mais disponible pour des déplacements dans tout le Cameroun et à l'international.</p>
+
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="info-text">
+                                        <h4>Studio Principal</h4>
+                                        <p>Boulevard de la Liberté, Akwa<br>Douala, Cameroun</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                                    <div class="info-text">
+                                        <h4>Téléphone & WhatsApp</h4>
+                                        <p>+237 6 70 00 00 00</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                                    <div class="info-text">
+                                        <h4>Email Professionnel</h4>
+                                        <p>booking@photostudiocmr.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Iframe Douala, Cameroun -->
+                        <div class="map-wrapper glass-card mt-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127357.51261338002!2d9.664402636184568!3d4.048259695650221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128be2e1f6d1%3A0x868c68dc3b516b3b!2sDouala%2C%20Cameroon!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-camera-retro"></i></span>
+                    PhotoStudio
+                </a>
+                <p>L'excellence photographique à votre service au Cameroun et à l'international.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Suivez-moi</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-500px"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PhotoStudio. Tous droits réservés.</p>
+            <p class="student-credit mt-3">Projet réalisé par l'étudiant <strong>Guepi takouo peguy maeva</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
